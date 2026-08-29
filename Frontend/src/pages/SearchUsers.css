@@ -1,0 +1,768 @@
+/* =========================================
+   ASHUAPP SEARCH PAGE
+========================================= */
+
+.search-page {
+  min-height: calc(100vh - 64px);
+
+  padding: 45px 16px 70px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(131, 58, 180, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(81, 91, 212, 0.10),
+      transparent 30%
+    ),
+    #f8f9fd;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   MAIN SEARCH BOX
+========================================= */
+
+.search-box {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(55, 45, 100, 0.08);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.search-header {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  margin-bottom: 22px;
+}
+
+.search-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #515bd4
+    );
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 6px 16px rgba(81, 59, 180, 0.22);
+}
+
+.search-header h2 {
+  margin: 0 0 4px;
+
+  color: #262626;
+
+  font-size: 23px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+.search-header p {
+  margin: 0;
+
+  color: #8a8a8a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   SEARCH FORM
+========================================= */
+
+.search-form {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   INPUT WRAPPER
+========================================= */
+
+.search-input-wrapper {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  background: #f8f8fb;
+
+  border: 1px solid #e1e2e9;
+
+  border-radius: 11px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-input-wrapper:focus-within {
+  background: #ffffff;
+
+  border-color: #7655d9;
+
+  box-shadow:
+    0 0 0 3px rgba(118, 85, 217, 0.10);
+}
+
+.search-input-wrapper > span {
+  margin-right: 8px;
+
+  color: #777;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.search-input-wrapper input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #262626;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.search-input-wrapper input::placeholder {
+  color: #999;
+}
+
+
+/* =========================================
+   CLEAR BUTTON
+========================================= */
+
+.clear-search {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e7e7ec;
+
+  color: #666;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.clear-search:hover {
+  background: #dcdce3;
+
+  color: #333;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.search-button {
+  height: 45px;
+
+  padding: 0 19px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #515bd4
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(81, 59, 180, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.search-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(81, 59, 180, 0.27);
+}
+
+.search-button:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.search-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.search-results {
+  width: 100%;
+}
+
+
+/* =========================================
+   RESULTS TITLE
+========================================= */
+
+.results-title {
+  margin-bottom: 10px;
+
+  padding-left: 3px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   USER CARD
+========================================= */
+
+.user-card {
+  width: 100%;
+
+  min-height: 66px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 9px;
+
+  padding: 11px 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e6ec;
+
+  border-radius: 13px;
+
+  color: #262626;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 3px 10px rgba(50, 40, 100, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+
+  background: #fcfbff;
+
+  border-color: #cfc5ef;
+
+  box-shadow:
+    0 7px 18px rgba(50, 40, 100, 0.08);
+}
+
+
+/* =========================================
+   USER AVATAR
+========================================= */
+
+.user-avatar {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #515bd4
+    );
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 10px rgba(81, 59, 180, 0.18);
+}
+
+
+/* =========================================
+   USER DETAILS
+========================================= */
+
+.user-details {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.user-details strong {
+  overflow: hidden;
+
+  color: #262626;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.user-details span {
+  overflow: hidden;
+
+  color: #8a8a8a;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.user-arrow {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1effb;
+
+  color: #6846c4;
+
+  font-size: 17px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.user-card:hover .user-arrow {
+  background: #e7e1fa;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   SEARCH MESSAGES
+========================================= */
+
+.search-message {
+  padding: 45px 20px;
+
+  text-align: center;
+
+  background: #fbfbfd;
+
+  border: 1px dashed #dcdce6;
+
+  border-radius: 14px;
+}
+
+.search-message h3 {
+  margin: 10px 0 5px;
+
+  color: #333;
+
+  font-size: 16px;
+}
+
+.search-message p {
+  max-width: 330px;
+
+  margin: 0 auto;
+
+  color: #8a8a8a;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DISCOVER / NO RESULT ICON
+========================================= */
+
+.discover-icon,
+.no-result-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #eeebfb;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.search-spinner {
+  width: 28px;
+  height: 28px;
+
+  margin: 0 auto 12px;
+
+  border: 3px solid #e7e4f1;
+
+  border-top-color: #833ab4;
+
+  border-right-color: #515bd4;
+
+  border-radius: 50%;
+
+  animation:
+    search-spin 0.8s linear infinite;
+}
+
+@keyframes search-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 650px) {
+
+  .search-page {
+    padding: 30px 12px 50px;
+  }
+
+  .search-box {
+    padding: 24px 20px;
+
+    border-radius: 17px;
+  }
+
+  .search-header h2 {
+    font-size: 21px;
+  }
+
+  .search-header p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .search-page {
+    padding: 18px 9px 45px;
+  }
+
+  .search-box {
+    padding: 20px 13px;
+
+    border-radius: 15px;
+  }
+
+  .search-header {
+    gap: 11px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 17px;
+  }
+
+  .search-icon {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 11px;
+
+    font-size: 23px;
+  }
+
+  .search-header h2 {
+    font-size: 19px;
+  }
+
+  .search-header p {
+    font-size: 10px;
+  }
+
+
+  /* SEARCH FORM */
+
+  .search-form {
+    gap: 6px;
+
+    margin-bottom: 20px;
+  }
+
+  .search-input-wrapper {
+    height: 42px;
+
+    padding: 0 10px;
+
+    border-radius: 9px;
+  }
+
+  .search-input-wrapper > span {
+    font-size: 13px;
+
+    margin-right: 6px;
+  }
+
+  .search-input-wrapper input {
+    font-size: 12px;
+  }
+
+  .search-button {
+    height: 42px;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+  }
+
+
+  /* USER CARD */
+
+  .user-card {
+    min-height: 61px;
+
+    gap: 10px;
+
+    padding: 9px 10px;
+
+    border-radius: 11px;
+  }
+
+  .user-avatar {
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+  .user-details strong {
+    font-size: 12px;
+  }
+
+  .user-details span {
+    font-size: 10px;
+  }
+
+  .user-arrow {
+    width: 25px;
+    height: 25px;
+
+    font-size: 15px;
+  }
+
+  .results-title {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .search-page {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .search-box {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .search-header h2 {
+    font-size: 18px;
+  }
+
+  .search-button {
+    padding: 0 10px;
+  }
+
+  .user-card {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

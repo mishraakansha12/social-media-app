@@ -1,0 +1,304 @@
+/* =========================================
+   ASHUAPP NAVBAR
+   Soft Colorful Theme
+========================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      #f8f3ff 0%,
+      #f1edff 45%,
+      #eef2ff 100%
+    );
+
+  border-bottom: 1px solid #e5e1f0;
+
+  box-shadow:
+    0 4px 18px rgba(92, 68, 140, 0.08);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1100px;
+
+  min-height: 64px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  text-decoration: none;
+
+  font-size: 24px;
+  font-weight: 850;
+
+  background:
+    linear-gradient(
+      100deg,
+      #7c3aed,
+      #8b5cf6,
+      #4f46e5
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  letter-spacing: -0.5px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* =========================================
+   NORMAL LINKS
+========================================= */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 9px 12px;
+
+  color: #514b60;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  border-radius: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #6d42c5;
+
+  background:
+    rgba(124, 58, 237, 0.09);
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-btn {
+  border: none;
+
+  padding: 9px 15px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(99, 102, 241, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(99, 102, 241, 0.28);
+}
+
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================================
+   REGISTER
+========================================= */
+
+.register-btn {
+  display: inline-block;
+
+  padding: 9px 17px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 12px rgba(99, 102, 241, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(99, 102, 241, 0.27);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .navbar-container {
+    min-height: 58px;
+
+    padding: 0 12px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 8px;
+
+    font-size: 16px;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .logout-btn {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .register-btn {
+    padding: 8px 11px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .navbar-container {
+    padding: 0 8px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    padding: 7px;
+
+    font-size: 15px;
+  }
+
+  .logout-btn {
+    padding: 7px 8px;
+
+    font-size: 10px;
+  }
+
+  .register-btn {
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+}

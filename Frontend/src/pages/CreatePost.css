@@ -1,0 +1,533 @@
+/* =========================================
+   CREATE POST PAGE
+========================================= */
+
+.create-post-page {
+  min-height: calc(100vh - 64px);
+
+  padding: 45px 16px 70px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(131, 58, 180, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(81, 91, 212, 0.10),
+      transparent 30%
+    ),
+    #f8f9fd;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.create-post-card {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e6ef;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(50, 40, 100, 0.08);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.create-post-header {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.create-post-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #515bd4
+    );
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 400;
+
+  box-shadow:
+    0 5px 15px rgba(81, 59, 180, 0.22);
+}
+
+.create-post-header h2 {
+  margin: 0 0 4px;
+
+  color: #262626;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.create-post-header p {
+  margin: 0;
+
+  color: #8a8a8a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.create-post-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.optional {
+  margin-left: 7px;
+
+  color: #999;
+
+  font-size: 11px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #dfe2ea;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fbfbfd;
+
+  color: #262626;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+
+  border-color: #7355d6;
+
+  box-shadow:
+    0 0 0 3px rgba(115, 85, 214, 0.10);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.form-group textarea {
+  min-height: 130px;
+
+  resize: vertical;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   CHARACTER COUNT
+========================================= */
+
+.character-count {
+  align-self: flex-end;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.image-upload-box {
+  position: relative;
+
+  width: 100%;
+  min-height: 155px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 20px;
+
+  border: 2px dashed #d7d3ed;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf9ff,
+      #f7f9ff
+    );
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.image-upload-box:hover {
+  border-color: #7655d9;
+
+  background: #f8f6ff;
+}
+
+.image-upload-box input[type="file"] {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  inset: 0;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3px;
+
+  border-radius: 50%;
+
+  background: #eeeaff;
+
+  color: #6846c4;
+
+  font-size: 25px;
+}
+
+.image-upload-box strong {
+  color: #444;
+
+  font-size: 13px;
+}
+
+.image-upload-box > span {
+  color: #999;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.preview-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 260px;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+}
+
+.change-image {
+  color: #6846c4 !important;
+
+  font-size: 11px !important;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PUBLISH BUTTON
+========================================= */
+
+.create-post-btn {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #515bd4
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(81, 59, 180, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.create-post-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 20px rgba(81, 59, 180, 0.28);
+}
+
+.create-post-btn:active {
+  transform: scale(0.98);
+}
+
+.create-post-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   BUTTON LOADING
+========================================= */
+
+.button-spinner {
+  display: inline-block;
+
+  width: 13px;
+  height: 13px;
+
+  margin-right: 7px;
+
+  vertical-align: -2px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation:
+    create-spin 0.7s linear infinite;
+}
+
+@keyframes create-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 650px) {
+
+  .create-post-page {
+    padding: 28px 12px 50px;
+  }
+
+  .create-post-card {
+    padding: 24px 20px;
+
+    border-radius: 17px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .create-post-page {
+    padding: 18px 9px 40px;
+  }
+
+  .create-post-card {
+    padding: 21px 15px;
+
+    border-radius: 15px;
+  }
+
+  .create-post-header {
+    gap: 11px;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 17px;
+  }
+
+  .create-post-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    font-size: 24px;
+  }
+
+  .create-post-header h2 {
+    font-size: 20px;
+  }
+
+  .create-post-header p {
+    font-size: 11px;
+  }
+
+  .create-post-form {
+    gap: 18px;
+  }
+
+  .form-group input[type="text"],
+  .form-group textarea {
+    padding: 11px 12px;
+
+    font-size: 13px;
+  }
+
+  .form-group textarea {
+    min-height: 115px;
+  }
+
+  .image-upload-box {
+    min-height: 135px;
+
+    padding: 15px;
+  }
+
+  .image-preview {
+    max-height: 220px;
+  }
+
+  .create-post-btn {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+}
